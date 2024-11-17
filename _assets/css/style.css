@@ -1,0 +1,816 @@
+/* -- ALL PAGES -- */
+/* Tags */
+:root {
+  --light-green: #6AF171;
+  --green: #33c764;
+  --dark-green: #1e5e56;
+  --purple: #6947da;
+  --black: #150c39;
+  --white: #8cd9f9;
+  --whiter-white: #ADE7FF;
+  --red: #a62459;
+  --dark: rgba(21, 12, 57, 0.5);
+  --light: rgba(140, 217, 249, 0.5);
+  
+  --content-side-padding: 15px;
+  --card-height: 200px;
+  --text-shadow: 0.08em 0.08em var(--purple);
+  --box-shadow: 4px 4px var(--purple);
+  
+  --primary-font: Comfortaa, sans-serif;
+  --secondary-font: ConcertOne, sans-serif;
+}
+
+@font-face {
+  font-family: ConcertOne;
+  src: url("../fonts/ConcertOne-Regular.ttf");
+}
+
+@font-face {
+  font-family: Comfortaa;
+  src: url("../fonts/Comfortaa-Variable.ttf");
+}
+
+html {
+  background-image: url("../img/bushes_background.png");
+  background-size: 100vw;
+  background-position: bottom center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  
+  background-color: #142B73;
+  color: var(--white);
+  font-family: var(--primary-font);
+	margin: auto 15%;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+	
+	/* Start of Scrollbar CSS */
+	/* Firefox */
+	scrollbar-width: auto;
+  scrollbar-color: var(--white) #150c39;
+  /* Chrome, Edge, and Safari */
+  &:-webkit-scrollbar {
+    width: 16px;
+  }
+  &:-webkit-scrollbar-track {
+    background: var(--black);
+  }
+  &:-webkit-scrollbar-thumb {
+    background-color: #328992;
+    border-radius: 10px;
+    border: 3px none #ffffff;
+  }
+  /* End of Scrollbar CSS */
+}
+
+details {
+  padding-left: 0.5em;
+}
+
+details[open] > summary {
+  border-bottom: 2px solid var(--purple);
+}
+
+details.sub {
+  border-left: 4px dotted var(--purple);
+  margin-left: 1.75em;
+}
+
+details.sub > summary {
+  list-style-type: "⏵";
+}
+
+details.sub[open] > summary {
+  list-style-type: "⏷";
+}
+
+summary {
+  padding: 5px;
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  -moz-user-select: none;
+  user-select: none; /* Standard syntax */
+}
+
+dt {
+  font-weight: bold;
+  font-size: 1.25em;
+  &:not(:first-of-type) {
+    margin-top: 0.5em;
+  }
+}
+
+dd {
+  margin-left: 15px;
+  &:before {
+    content: "↳ ";
+  }
+}
+
+/* -- SECTIONING -- */
+body {
+  margin: 0;
+  background-color: var(--dark);
+  overflow-x: hidden;
+  min-height: 100vh;
+  box-shadow: 5px 0 50px var(--dark);
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  padding: 25px var(--content-side-padding) 0;
+}
+
+h1, h2, h3, h4, dt {
+  font-family: var(--secondary-font);
+  font-weight: normal;
+}
+
+h1 {
+  margin: 0;
+  + small {
+    font-size: 1em;
+  }
+}
+
+:not(article) > hgroup, :not(hgroup) > h1 {
+  background: var(--green);
+  color: var(--dark-green);
+  font-size: 42px;
+  border-radius: 0 1em 1em 0;
+  margin: 25px 25% 0 -15px;
+  padding: 0.25em 0.5em;
+  text-transform: uppercase;
+}
+
+:is(:not(hgroup) > h1, :not(article) > hgroup) + :not(section, h2) {
+  margin-top: 25px;
+}
+
+hgroup > small {
+  font-size: 24px;
+}
+
+h1 {
+  font-size: 42px;
+  position: relative;
+}
+
+h1::after {
+  content: "🟆";
+  line-height: 1.2em;
+  position: absolute;
+  right: 0.75em;
+  font-family: sans-serif;
+}
+
+h2 {
+  margin: 30px 60% 5px -15px;
+  padding: 0em 1em;
+  background: var(--purple);
+  border-radius: 0 1em 1em 0;
+  color: var(--whiter-white);
+}
+
+:is(hgroup, h1) + h2, h1 + section > h2:first-child {
+  margin-top: 0;
+}
+
+:not(hgroup) > h1.box {
+  margin: 5px 30px;
+  border-bottom: 3px solid var(--white);
+}
+
+#sidebar {
+  position: absolute;
+  left: 25px;
+  top: 25px;
+  width: 10%;
+  & a:hover {
+    color: white;
+    background-color: transparent;
+  }
+  & a:not([href]) {
+    opacity: 0.5;
+  }
+}
+
+#home-button {
+  text-align: center;
+  margin: 0px;
+  & a {
+    color: var(--green);
+  }
+}
+
+nav {
+  background-color: var(--black);
+  border-radius: 10px;
+  height: 500px;
+  padding-top: 15px;
+  & dl {
+    width: 100%;
+    height: 90%;
+    background-color: var(--green);
+    padding: 10px;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--dark-green);
+    & a {
+      color: var(--dark-green);
+    }
+  }
+}
+
+hr {
+  border: none;
+  border-top: 7.5px dotted var(--purple);
+  margin: 4em 30%;
+}
+
+footer {
+  border-top: 2px solid var(--purple);
+  margin: 100px 0 0;
+  background-color: var(--black);
+  border-bottom: 200px solid var(--black);
+}
+
+.wrapper {
+  flex-grow: 1;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: auto;
+}
+
+.column {
+  flex: 25%;
+  max-width: 33%;
+  padding: 5px;
+  & img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 5px;
+  }
+}
+
+#link-container {
+  background-color: var(--green);
+  margin: 30px 0 60px;
+  position: relative;
+  color: var(--black);
+  & a {
+    color: var(--black);
+  }
+  & a:hover {
+    color: var(--green);
+    background-color: var(--black);
+  }
+  & a:visited:hover {
+    color: var(--purple);
+  }
+}
+
+#reference-list {
+  position: relative;
+  bottom: -75px;
+  padding-top: 15px;
+  border-top: 2px dashed var(--white);
+  margin: auto 30px;
+  padding-left: 30px;
+}
+
+#portrait, nav, #link-container, :not(hgroup) > h1.box {
+  box-shadow: var(--box-shadow);
+}
+
+/* -- TEXT -- */
+p {
+  padding: 0 15px;
+}
+
+article {
+  position: relative;
+  padding: 10px;
+  box-sizing: border-box;
+  & p {
+    margin: 5px 0 0 0;
+    padding: 0;
+  }
+}
+
+blockquote, .bubble {
+  background: linear-gradient(to right, transparent, rgba(92, 208, 255, 0.25)), url("../img/arcade-glitter_tile.png") no-repeat 95%;
+  background-position-y: bottom -15px;
+  background-size: auto, 75px;
+  
+  border-left: 4px solid var(--purple);
+  border-radius: 0 25px 25px 0;
+  box-shadow: 5px 0 25px var(--dark);
+  margin: 15px 40px;
+  padding-left: 15px;
+  & p {
+    margin: 0;
+    padding: 1em 1em 1em 0;
+  }
+}
+
+figcaption {
+  text-align: center;
+  margin-top: 5px;
+  letter-spacing: 0.75px;
+  font-variant-caps: all-small-caps;
+  font-weight: bold;
+}
+
+.status {
+  text-align: center;
+  color: white;
+  border: 5px solid var(--white);
+  border-radius: 20px;
+	background-image: linear-gradient(to right, #328992, var(--green), #3a7450);
+	margin: auto 15px 25px 15px;
+}
+
+/* In-line */
+a {
+  color: var(--white);
+  text-decoration: underline wavy var(--green) 1px;
+  &:hover {
+    color: var(--black);
+    background-color: var(--green);
+    text-decoration: none;
+  }
+  &:visited {
+    text-decoration-color: var(--purple);
+  }
+  &:visited:hover {
+    color: white;
+    background-color: var(--purple);
+  }
+  &[href^="http"]:after {
+    content: "\1F855";
+    display: inline-block;
+    position: relative;
+    bottom: 0.1em;
+    line-height: 0;
+    text-shadow: var(--text-shadow);
+  }
+}
+
+nav a {
+  text-decoration: none;
+}
+
+@keyframes rainbow {
+  0% { color: #F7447E; }
+  25% { color: #FFA756; }
+  50% { color: var(--green); }
+  75% { color: #4F96FF; }
+  100% { color: #F7447E; }
+}
+
+a.section-link {
+  font-size: 1.25em;
+  line-height: 0.75em;
+  margin: 0 0.15em;
+  padding: 0 0.15em;
+  text-decoration: none;
+  vertical-align: sub;
+  color: inherit;
+  &:hover {
+    animation-name: rainbow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    background-color: transparent;
+  }
+}
+
+h1.box, .card p {
+  text-shadow: var(--text-shadow);
+}
+
+span.spoiler {
+  color: transparent;
+  background-color: var(--black);
+  cursor: pointer;
+  padding: 3px;
+}
+
+.cite {
+  font-style: normal;
+  vertical-align: super;
+  font-size: smaller;
+}
+
+.tool-tip {
+  cursor: help;
+  color: inherit;
+  text-decoration: underline dotted var(--white) 1px;
+}
+
+hgroup small, hgroup time {
+  opacity: 0.5;
+  display: block;
+  position: relative;
+  left: 1em;
+  letter-spacing: 0.05em;
+  font-variant-caps: all-small-caps;
+  font-weight: bold;
+}
+
+/* -- MEDIA -- */
+#portrait {
+  overflow: hidden;
+  border-radius: 10px;
+  aspect-ratio: 1/1;
+  box-sizing: border-box;
+  border: 5px solid var(--black);
+}
+
+#card-collection {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+article.cut-out img, blockquote img {
+  max-width: 100%;
+  max-height: 500px;
+  border: 2px solid var(--purple);
+  border-radius: 15px;
+}
+
+figure {
+  margin: 30px auto;
+  & img {
+    width: 100%;
+  }
+}
+
+#lightbox {
+  display: none;
+  position: fixed;
+  overflow: hidden;
+	z-index: 75;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(21, 12, 57, 0.9);
+	cursor: zoom-out;
+	justify-content: center;
+	align-items: center;
+	& img {
+	  min-height: 75%;
+	  max-height: 90%;
+	  max-width: 100%;
+	  cursor: default;
+	}
+	& figcaption {
+	  color: var(--black);
+	}
+}
+
+img.spoiler {
+  filter: blur(25px);
+  cursor: pointer;
+}
+
+/* -- UNSORTED -- */
+.rating {
+  font-family: var(--secondary-font);
+  font-size: 1.5em;
+  position: absolute;
+  bottom: 0.25em;
+  & span {
+    display: inline-block;
+    background-color: var(--green);
+    width: 1.25em;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    padding: 0.1em;
+    color: var(--black);
+    text-align: center;
+    font-size: 0.75em;
+  }
+}
+
+.review {
+  & details {
+    display: none;
+    height: var(--card-height);
+    max-width: 750px;
+    vertical-align: top;
+    box-sizing: border-box;
+    margin-left: 0.25em;
+  }
+  & details[open] {
+    display: inline-block;
+  }
+  & details[closed] {
+    display: none;
+  }
+  & summary {
+    display: none;
+  }
+}
+
+.thumbnail {
+  border-radius: 15px 15px 0 0;
+  border: 3px solid var(--black);
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  & img {
+    transition: transform 250ms;
+  }
+}
+
+.card {
+  display: inline-block;
+  max-height: var(--card-height);
+  aspect-ratio: 5/6;
+  border-radius: 15px;
+  background-color: var(--black);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  position: relative;
+  transition: box-shadow 100ms, transform 250ms, color 250ms;
+  & p {
+    font-family: var(--secondary-font);
+    font-size: 1.25em;
+    position: absolute;
+    width: 100%;
+    top: 0.25em;
+    background-color: var(--dark);
+  }
+  &:hover {
+    transform: translateY(-0.75em);
+    cursor: pointer;
+  }
+  &.active {
+    transform: translateY(-1.25em) !important;
+    color: white;
+    & img {
+      transform: scale(1.15);
+    }
+  }
+}
+
+.cut-out {
+  /* Use as base article style */
+  display: block;
+  margin: 0 10% 15px 5%;
+  background-color: var(--black);
+  border: 3px dotted var(--green);
+  box-shadow: 5px 0 25px var(--dark);
+  & h3 {
+    background-color: var(--green);
+    color: var(--black);
+    letter-spacing: 0.05em;
+    font-weight: normal;
+    padding: 0.25em 0.75em;
+    margin: 0.5em -13px;
+    & a {
+      color: var(--black);
+      padding: 0.25em;
+      text-decoration-color: var(--black);
+    }
+    & a:visited {
+      text-decoration-color: var(--purple);
+    }
+    & a:hover {
+      color: var(--green);
+      background-color: var(--black);
+    }
+    & a:hover:visited {
+      color: var(--purple);
+    }
+  }
+}
+
+:not(article) > hgroup {
+  padding-bottom: 5px;
+}
+
+#commission-info {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  & article {
+    margin: 0;
+    width: 20%;
+  }
+}
+
+ol > ::marker {
+  font-size: 0.75em;
+}
+
+strong {
+  letter-spacing: 0.05em;
+  font-variant-caps: all-small-caps;
+  color: var(--green);
+}
+
+blockquote > p.ref {
+  text-align: right;
+  display: block;
+  margin: 0.5em 12.5% 0 0;
+  font-style: normal;
+  color: var(--green);
+}
+
+blockquote > p.ref::before {
+  content: "- ";
+}
+
+:not(hgroup) > h1.box {
+  padding-bottom: 5px;
+}
+
+h1:not(:first-child), hgroup:not(:first-child) {
+  margin-top: 50px;
+}
+
+body > p + ul {
+  margin-top: -15px;
+}
+
+#hamburger-menu {
+  display: none;
+  border: none;
+  position: fixed;
+  background-color: var(--green);
+  color: var(--black);
+  min-width: 50px;
+  min-height: 50px;
+  font-size: 24px;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+}
+
+/* -- LINKS -- */
+.links {
+  padding: 0.5em;
+  text-align: center;
+  margin-left: -15px;
+  margin-right: -15px;
+  & a {
+    padding: 0.5em;
+  }
+}
+
+footer a, h2 a {
+  color: var(--green);
+}
+
+/* -- SPECIAL -- */
+/* Block */
+main > div.tags {
+  margin: 15px;
+}
+
+.tags button, article button {
+  cursor: pointer;
+  border-radius: 20px;
+  background-color: var(--black);
+  color: var(--purple);
+  border: 2px solid var(--purple);
+  min-width: 50px;
+  text-transform: lowercase;
+  padding: 0 1em;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+#stats p {
+  margin: 0;
+}
+
+/* Commissions Page */
+.availability {
+  text-align: center;
+  font-variant: small-caps;
+  position: relative;
+  margin: 50px auto;
+  & div:not(.banner) {
+    margin: auto 37.5%;
+    background-color: var(--black);
+    border-left: 2px solid var(--red);
+    border-right: 2px solid var(--red);
+  }
+  & span {
+    font-size: 65px;
+    color: var(--red);
+  }
+}
+
+.banner {
+  background-image: linear-gradient(to right, rgba(1,0,0,0), var(--red), var(--red), var(--red), rgba(1,0,0,0));
+  width: 100%;
+  height: 75px;
+  position: absolute;
+  top: 20px;
+  z-index: -1;
+}
+
+#examples {
+  display: block;
+  width: 66%;
+  margin: auto;
+  text-align: center;
+}
+
+#examples > div > div {
+  background-color: var(--green);
+  color: var(--black);
+  border-radius: 15px;
+  width: 22.5%;
+  display: inline-block;
+  margin: auto 1%;
+}
+
+.wills-and-wonts {
+  & h2 {
+    text-align: center;
+    margin: 5px 0;
+  }
+  & p {
+    text-align: center;
+    margin: 10px 0 15px;
+  }
+  & article {
+    padding: 0;
+    width: 200px;
+  }
+}
+
+.wills-and-wonts > div {
+  margin: auto;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+}
+
+/* -- MOBILE VIEWPORT -- */
+@media only screen and (max-width: 750px) {
+  html {
+    margin: 0;
+  }
+  
+  body {
+    padding: 50px 5px 0px;
+  }
+  
+  article {
+    margin: 0 5% 15px 5%;
+  }
+  
+  footer {
+    border-bottom: 50px solid var(--black);
+  }
+  
+  nav {
+    position: fixed;
+    width: 75vw;
+  }
+  
+  #hamburger-menu {
+    display: block;
+  }
+  
+  #sidebar {
+    display: none;
+    right: 0;
+    top: 0;
+    z-index: 5;
+    & h3 {
+      margin: 7px;
+    }
+    & > :not(nav) {
+      display: none;
+    }
+  }
+  
+  .row {
+    width: 100%;
+  }
+  
+  .card {
+    &:hover {
+      transform: none;
+    }
+  }
+}
