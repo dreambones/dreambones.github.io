@@ -15,35 +15,31 @@
 		<meta property="og:description" content="DREAMBONES&#39; personal website!">
 	</head>
 	<body>
-		<div id="sidebar">
-			<nav>
-				<h3 id="home-button"><a href="/">• HOME •</a></h3>
-				<dl>
-					<dt><a href="/blog/">Blog</a></dt>
-					<dt><a href="/arting/">Arting</a></dt>
-						<dd><a href="/arting/">Commissions</a></dd>
-					<dt><a href="/coding/">Coding</a></dt>
-					<dt><a href="/writing/">Writing</a></dt>
-						<dd><a href="/writing/TUDiT/">TUDiT</a></dd>
-					<dt><a>Other</a></dt>
-						<dd><a href="/other/recommendations/">Recommendations</a></dd>
-						<dd><a href="/other/bg3-reactions-guide/">BG3 Reactions Guide</a></dd>
-				</dl>
-			</nav>
-			<hr>
-			<div id="portrait">
-				<img src="../../_assets/img/04.05_graffiti-goblin.png" style="height:100%">
-			</div>
-			<p style="text-align:center">That's me!</p>
-		</div>
-		
-		<button id="hamburger-menu" onClick="openNavigation(this)">☰</button>
-		
 		<div class="wrapper">
+			<div id="banner">
+				<a href="/"><img src="../../_assets/img/banner.png" title="Homepage" alt="A vibrant, stylized logo and banner of the username 'DREAMBONES.'"></a>
+				<nav>
+					<a href="/blog/">BLOG</a>
+					<a href="/arting/">ARTING</a>
+					<a href="/coding/">CODING</a>
+					<div class="dropdown">
+						<a href="/writing/">WRITING</a>
+						<div class="dropdown-content">
+							<a href="/writing/TUDiT/">TUDiT</a>
+						</div>
+					</div>
+					<div class="dropdown">
+						<a>OTHER</a>
+						<div class="dropdown-content">
+							<a href="/other/recommendations/">RECOMMENDATIONS</a>
+							<a href="/other/bg3-reactions-guide/">BG3 REACTIONS GUIDE</a>
+						</div>
+					</div>
+				</nav>
+			</div>
 			<main>
 				
 <h1>Recommendations</h1>
-<p>A bunch of miscellaneous gizmos, doodads, and other whatsits that I think are really neat!</p>
 <section>
 	<h2 id="literature-recommendations">Books</h2>
 	<div id="card-collection">
@@ -142,82 +138,19 @@
 
 <section>
 	<h2 id="music-recommendations">Music</h2>
-	<div id="card-collection">
-		<article class="review">
-			<div class="card" onclick="toggleDetails(this)">
-				<div class="thumbnail"><img src="https://f4.bcbits.com/img/0034521151_10.jpg"></div>
-				<p>Cosmo Sheldrake</p>
-				<button type="button">Read Review</button>
-			</div>
-			<details class="bubble">
-				<summary>Review</summary>
-				<small>Links: <a href="https://cosmosheldrake.bandcamp.com">Bandcamp</a> | <a href="https://open.spotify.com/artist/6hV6oxGLeLFw17DGjIPkYD">Spotify</a></small>
-				<p>His music sounds like he is conductor for an orchestra of weeping willows, frogs, and fish. There's an organic element to each song that feels so unique to his music and his music alone that you can't help but be swept up in this sort of awe for the stories he spins with the instruments: like nursery rhymes told to the mice in the cupboard.</p>
-				<p class="rating">Rating: <span>S</span></p>
-			</details>
-		</article>
-		
-		<article class="review">
-			<div class="card" onclick="toggleDetails(this)">
-				<div class="thumbnail"><img src="https://f4.bcbits.com/img/0028361327_10.jpg"></div>
-				<p>Machinery of the Human Heart</p>
-				<button type="button">Read Review</button>
-			</div>
-			<details class="bubble">
-				<summary>Review</summary>
-				<small>Links: <a href="https://machineryofthehumanheart.bandcamp.com/">Bandcamp</a> | <a href="https://open.spotify.com/artist/15uw42DlojvWW7S6k2PIuj">Spotify</a></small>
-				<p>I was made aware of his music through an animator project with one of his more popular songs, <a href="https://open.spotify.com/track/6HVkkyZCfZJd7VWYDxBcTK?si=ba58749b2c9a430d">Jesus on the Telephone</a>. He has a very unique style of singing that feels more raw and unfiltered yet at the same time amps up the drama, with instrumentals that tend to reflect the same. Not all of his songs quite do it for me, but I love the passion behind each one that's hard to miss.</p>
-				<p class="rating">Rating: <span>B</span></p>
-			</details>
-		</article>
-		
-		<article class="review">
-			<div class="card" onclick="toggleDetails(this)">
-				<div class="thumbnail"><img src="https://f4.bcbits.com/img/0013696370_10.jpg"></div>
-				<p>The 8-Bit Big Band</p>
-				<button type="button">Read Review</button>
-			</div>
-			<details class="bubble">
-				<summary>Review</summary>
-				<small>Links: <a href="https://the8bitbigband.bandcamp.com/">Bandcamp</a> | <a href="https://open.spotify.com/artist/5d1sgs6DwqUcHqQsvwStt2">Spotify</a></small>
-				<p>What it says on the label: the band has made a career out of creating big band and similarly styled covers of videogame music, with outstanding production quality and passion put into each song and performance.</p>
-				<p class="rating">Rating: <span>A</span></p>
-			</details>
-		</article>
-		
-		<article class="review">
-			<div class="card" onclick="toggleDetails(this)">
-				<div class="thumbnail"><img src="https://f4.bcbits.com/img/0011834887_10.jpg"></div>
-				<p>The Oh Hellos</p>
-				<button type="button">Read Review</button>
-			</div>
-			<details class="bubble">
-				<summary>Review</summary>
-				<small>Links: <a href="https://theohhellos.bandcamp.com">Bandcamp</a> | <a href="https://open.spotify.com/artist/3Fe3pszR2t4TOBVz41B1WR">Spotify</a></small>
-				<p>If a bunch of bards from a medieval fantasy setting got together and made a band in the modern era, this would be them. Their music is all very climactic and meant to take your breath away with the feeling of power and conviction each song has, with an underlying feeling of strength in love and community and just trying your damn best.</p>
-				<p class="rating">Rating: <span>S</span></p>
-			</details>
-		</article>
-		
-		<article class="review">
-			<div class="card" onclick="toggleDetails(this)">
-				<div class="thumbnail"><img src="https://f4.bcbits.com/img/0031144686_10.jpg"></div>
-				<p>Will Wood</p>
-				<button type="button">Read Review</button>
-			</div>
-			<details class="bubble">
-				<summary>Review</summary>
-				<small>Links: <a href="https://willwoodmusic.bandcamp.com">Bandcamp</a> | <a href="https://open.spotify.com/artist/1VQ8riQ31zVHtlxiCC9EZE">Spotify</a></small>
-				<p>Chaos, confusion, and candid cadavers! There no music quite like <strong>Will Wood</strong>'s with its both over-the-top drama and morbidity that makes much of his discography feel like you're on a rollercoaster ride that wasn't OSHA-certified. Just listening to one song of his will give you a very clear idea (yet none at all) as to what the rest of his music is like.</p>
-				<p class="rating">Rating: <span>S</span></p>
-			</details>
-		</article>
+	<div class="embed-container">
+		<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=4177020869/size=large/bgcol=333333/linkcol=ff4b82/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://tomcardy.bandcamp.com/album/the-dancefloor-at-the-end-of-the-universe">The Dancefloor At The End Of The Universe by Tom Cardy</a></iframe>
+		<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=4277812494/size=large/bgcol=333333/linkcol=ff4b82/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://music.theohhellos.com/album/dear-wormwood">Dear Wormwood by The Oh Hellos</a></iframe>
+		<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=2708312496/size=large/bgcol=333333/linkcol=ff4b82/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://bearghost.bandcamp.com/album/jiminy-2">jiminy by Bear Ghost</a></iframe>
+		<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=491720814/size=large/bgcol=333333/linkcol=ff4b82/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://cosmosheldrake.bandcamp.com/album/the-much-much-how-how-and-i-deluxe">The Much Much How How and I (Deluxe) by Cosmo Sheldrake</a></iframe>
+		<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=3283556988/size=large/bgcol=333333/linkcol=ff4b82/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://willwoodmusic.bandcamp.com/album/the-normal-album">The Normal Album by Will Wood</a></iframe>
+		<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=3620359595/size=large/bgcol=333333/linkcol=ff4b82/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://corywong.bandcamp.com/album/starship-syncopation">Starship Syncopation by Cory Wong</a></iframe>
 	</div>
 </section>
 			</main>
 		</div>
 		
-		<footer class="links">
+		<footer>
 			<a href="https://mastodon.social/@dreambones">Mastodon</a>
 			• <a href="https://ko-fi.com/bonesfloodedwithdreams">Ko-fi</a>
 			• <a href="https://www.tumblr.com/zennyaia">Tumblr</a>
