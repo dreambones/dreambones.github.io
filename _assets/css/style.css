@@ -407,15 +407,14 @@ hr {
 .cut-out {
   /* Use as base article style */
   display: block;
-  margin: 0 10% 15px 5%;
+  width: 600px;
+  margin: 15px;
   background-color: var(--black);
   border: 3px dotted var(--green);
   box-shadow: 5px 0 25px var(--dark);
   & h3 {
     background-color: var(--green);
-    color: var(--black);
-    letter-spacing: 0.05em;
-    font-weight: normal;
+    color: var(--dark-green);
     padding: 0.25em 0.75em;
     margin: 0.5em -13px;
     & a {
