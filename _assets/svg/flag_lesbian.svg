@@ -1,0 +1,7 @@
+<svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
+	<line x1="0" y1="8" x2="120" y2="8" style="stroke:#ff5757;stroke-width:16"/>
+	<line x1="0" y1="24" x2="120" y2="24" style="stroke:#ffb47a;stroke-width:16"/>
+	<line x1="0" y1="40" x2="120" y2="40" style="stroke:white;stroke-width:16"/>
+	<line x1="0" y1="56" x2="120" y2="56" style="stroke:#ff4b82;stroke-width:16"/>
+	<line x1="0" y1="72" x2="120" y2="72" style="stroke:#a91f7a;stroke-width:16"/>
+</svg>
