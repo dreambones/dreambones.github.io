@@ -19,7 +19,7 @@
 	
 	--black: #150c39;
 	--white: #ade7ff;
-	--dark: rgba(21, 12, 57, 0.5);
+	--dark: rgba(21, 12, 57, 0.66);
 	--light: rgba(140, 217, 249, 0.5);
 	
 	--primary-font: Comfortaa, sans-serif;
@@ -87,6 +87,7 @@ body {
 	box-shadow: 5px 0 50px var(--dark);
 	display: flex;
 	flex-direction: column;
+	backdrop-filter: blur(30px);
 }
 
 main {
@@ -393,6 +394,7 @@ hr {
 
 /* text */
 #back-button {
+	width: max-content;
 	border: 2px solid var(--white);
 	padding: 0.25em;
 	border-radius: 0.5em;
@@ -617,6 +619,23 @@ hr {
   }
 }
 
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-between;
+	& .column {
+		flex: 30%;
+		margin: 0 4px;
+		& img {
+			max-width: 100%;
+			border-radius: 15px;
+			border: 2px solid var(--green);
+			box-sizing: border-box;
+			margin: 4px 0;
+		}
+	}
+}
+
 .thumbnail {
 	border-radius: 15px 15px 0 0;
 	border: 3px solid var(--black);
@@ -715,5 +734,10 @@ hr {
 	/* CLASS STYLES */
 	.card:hover {
 		transform: none;
+	}
+	
+	.row .column {
+		flex: 45%;
+		max-width: 45%;
 	}
 }
